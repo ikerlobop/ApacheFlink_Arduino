@@ -1,2 +1,2 @@
 # ApacheFlink_Arduino
-Conexión de Arduino a Apache Flink a través del puerto serie
+Conexión de Apache Flink a Arduino a través del puerto serie.
