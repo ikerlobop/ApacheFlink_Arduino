@@ -22,9 +22,10 @@ public class SerialPortService {
             throw new Exception("No se ha encontrado ningún puerto serial disponible");
         }
 
-        // Configura la conexión con el primer puerto serial disponible
+        // Configuramos la conexión con el primer puerto serie disponible [0]
         serialPort = portNames[0];
         serialPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 100, 0);
+        //9600 baudios
         serialPort.setBaudRate(9600);
 
         // Abre la conexión serial y establece la entrada de datos
@@ -53,8 +54,6 @@ public class SerialPortService {
         while (running) {
             String data = input.readLine();
             if (data != null && !data.isEmpty()) {
-                // Aquí puedes procesar los datos como necesites
-                // Por ejemplo, puedes imprimir los datos en la consola
                 System.out.println(data);
             }
         }
